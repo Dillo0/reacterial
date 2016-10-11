@@ -5,7 +5,10 @@
   "main": "main.js",
   "private": "true",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "watch" : "watchify -v -d -t [ reactify --es6 ] src/js/index.js -o build/js/index.js",
+    "stylus" : "stylus -u nib -c -w -o build/css/master.css src/stylus/master.styl",
+    "build" : "browserify -t [ reactify --es6 ] src/js/index.js | uglifyjs > build/js/index.js"
   },
   "repository": "https://bitbucket.org/vutd/vutd-electron-desktop",
   "author": "Dani Vega @danivegamx - ingdanivega@gmail.com",
@@ -15,8 +18,13 @@
     "react-dom": "^15.3.2"
   },
   "devDependencies": {
+    "browserify": "^13.1.0",
     "electron": "^1.4.3",
     "nib": "^1.1.2",
-    "stylus": "^0.54.5"
+    "normalize.styl": "^3.0.3",
+    "reactify": "^1.1.1",
+    "stylus": "^0.54.5",
+    "uglify-js": "^2.7.3",
+    "watchify": "^3.7.0"
   }
 }
