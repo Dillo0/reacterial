@@ -1,22 +1,22 @@
 {
-  "name": "electron-quick-start",
+  "name": "vutd",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Virtually Up-To-Date Desktop App",
   "main": "main.js",
+  "private": "true",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "repository": "https://bitbucket.org/vutd/vutd-electron-desktop",
+  "author": "Dani Vega @danivegamx - ingdanivega@gmail.com",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
   "devDependencies": {
-    "electron": "^1.4.1"
+    "electron": "^1.4.3",
+    "nib": "^1.1.2",
+    "stylus": "^0.54.5"
   }
 }
