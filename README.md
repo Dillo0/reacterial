@@ -20,6 +20,25 @@ npm run start
 npm run test
 ```
 
+## Build:
+
+For build the app to a specific platform from CLI:
+
+```
+electron-packager <sourcedir> <appname> --platform=<platform> --arch=<arch> [optional flags...]
+```
+
+This will:
+
+- Find or download the correct release of Electron
+- Use that version of Electron to create a app in `<out>/<appname>-<platform>-<arch>` *(this can be customized via an optional flag)*
+
+`--platform` and `--arch` can be omitted, in two cases:
+
+* If you specify `--all` instead, bundles for all valid combinations of target
+  platforms/architectures will be created.
+* Otherwise, a single bundle for the host platform/architecture will be created.
+
 ## Dependencies
 
 ### electron

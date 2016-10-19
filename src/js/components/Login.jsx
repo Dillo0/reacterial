@@ -20,7 +20,7 @@ export default class Login extends React.Component {
                         <Toggle label="Mantenerme conectado" labelPosition="right"/>
                     </div>
                     <div className="btnWrapper">
-                        <RButton label="INICIAR SESIÓN" primary="true" backgroundColor="#60c7f8"/>
+                        <RButton label="INICIAR SESIÓN" primary={true} backgroundColor="#60c7f8"/>
                     </div>
                     <div className="btnWrapper">
                         <FButton label="OLVIDÉ CONTRASEÑA" />

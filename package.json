@@ -6,7 +6,9 @@
   "private": "true",
   "scripts": {
     "start": "electron .",
-    "stylus": "stylus -u nib -c -w -o build/css/master.css src/stylus/master.styl"
+    "stylus": "stylus -u nib -c -w -o build/css/master.css src/stylus/master.styl",
+    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --all --icon=icon.icns",
+    "build-all": "electron-packager . --all --icon=icon.icns"
   },
   "repository": "https://bitbucket.org/vutd/vutd-electron-desktop",
   "author": "Dani Vega @danivegamx - ingdanivega@gmail.com",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "electron": "^1.4.3",
+    "electron-packager": "^8.1.0",
     "flux": "^3.0.0",
     "keymirror": "^0.1.1",
     "material-ui": "^0.16.0",
