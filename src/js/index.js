@@ -1,5 +1,14 @@
-var React = require('react'),
-	ReactDOM = require('react-dom'),
-	App = require('./components/App');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Login from './components/Login.jsx';
 
-ReactDOM.render(<App title="VUTD" />, document.getElementById('react-container'));
+const App = () => (
+  <MuiThemeProvider>
+    <Login />
+  </MuiThemeProvider>
+);
+
+window.onload = function(){
+  ReactDOM.render(<App />, document.getElementById('react-container'));
+}
