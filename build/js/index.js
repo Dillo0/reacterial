@@ -1,0 +1,1 @@
+console.error("Error: Cannot find module './components/App.jsx' from '/Users/danivega/Documents/vutd/src/js'");

@@ -2,21 +2,32 @@
   "name": "vutd",
   "version": "1.0.0",
   "description": "Virtually Up-To-Date Desktop App",
-  "main": "main.js",
+  "main": "bootstrapper.js",
   "private": "true",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "stylus": "stylus -u nib -c -w -o build/css/master.css src/stylus/master.styl"
   },
   "repository": "https://bitbucket.org/vutd/vutd-electron-desktop",
   "author": "Dani Vega @danivegamx - ingdanivega@gmail.com",
   "license": "UNLICENSED",
   "dependencies": {
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-register": "^6.16.3",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },
   "devDependencies": {
     "electron": "^1.4.3",
+    "flux": "^3.0.0",
+    "keymirror": "^0.1.1",
+    "material-ui": "^0.16.0",
     "nib": "^1.1.2",
-    "stylus": "^0.54.5"
+    "normalize.styl": "^3.0.3",
+    "react-router": "^2.8.1",
+    "react-tap-event-plugin": "^1.0.0",
+    "stylus": "^0.54.5",
+    "underscore": "^1.8.3"
   }
 }
