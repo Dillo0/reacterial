@@ -2,7 +2,6 @@ import { app, BrowserWindow } from 'electron';
 
 let mainWindow = null;
 
-
 app.on('window-all-closed', () => {
   if (process.platform != 'darwin') {
     app.quit();
