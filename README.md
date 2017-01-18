@@ -1,15 +1,20 @@
-# VUTD (Virtually Up-To-Date) Desktop App
+# Reacterial App
 ## Built in Electron
-**By Daniel Vega** *@danivegamx <ingdanivega@gmail.com>*
 
 ## Instructions for development and code changes:
 
 *Automatic build will be triggered from scratch. Babel, will transpile JSX*
 
 ```
-git clone git@bitbucket.org:vutd/vutd-electron-desktop.git
+git clone git@github.com:danivegamx/reacterial.git
 npm install
 npm run start
+```
+
+*SASS Compile and watch*
+
+```
+npm run sass
 ```
 
 ## Testing app:
@@ -20,11 +25,30 @@ npm run start
 npm run test
 ```
 
+## Build:
+
+For build the app to a specific platform from CLI:
+
+```
+electron-packager <sourcedir> <appname> --platform=<platform> --arch=<arch> [optional flags...]
+```
+
+This will:
+
+- Find or download the correct release of Electron
+- Use that version of Electron to create a app in `<out>/<appname>-<platform>-<arch>` *(this can be customized via an optional flag)*
+
+`--platform` and `--arch` can be omitted, in two cases:
+
+* If you specify `--all` instead, bundles for all valid combinations of target
+  platforms/architectures will be created.
+* Otherwise, a single bundle for the host platform/architecture will be created.
+
 ## Dependencies
 
 ### electron
 
-The binary tool for native packaging.
+The binary tool for native packaging. (Can be changed to webpack!)
 
 ### react, react-dom
 
@@ -34,7 +58,7 @@ The library for UI Development.
 
 Transpiling tool for ES6 -> JSX -> JS.
 
-### stylus & nib
+### sass
 
 CSS pre-processing engine and mixin set to handle styles across browsers, solving compatibility issues.
 
@@ -55,15 +79,17 @@ CSS pre-processing engine and mixin set to handle styles across browsers, solvin
 		---- /roboto
 ---- src
 	---- js
-		---- actions
 		---- components
-		---- constants
-		---- dispatchers
-		---- stores
-		---- home.js
+            ---- Login.jsx
 		---- index.js
-	---- stylus
+	---- sass
 		---- components
+            ---- _base.scss
+            ---- _colors.scss
+            ---- _login.scss
+        ---- normalize
+        ---- fontface.scss
+        ---- master.scss
 ---- index.html
 ---- bootstrapper.js
 ---- main.js
@@ -77,7 +103,15 @@ CSS pre-processing engine and mixin set to handle styles across browsers, solvin
 
 ## Changelog
 
-### v1.0.1beta (Current)
+### v1.1.1 (Current)
+
+Prepared to fork.
+
+### v1.1.0beta (Deprecated)
+
+Implemented SASS and changed concept.
+
+### v1.0.1beta (Deprecated)
 
 Implemented ES6 syntax and Router.
 
